@@ -24,7 +24,6 @@ export class AjaxComponent {
     );
 
     http$.subscribe(resp => {
-      console.log(resp);
       this.users = resp;
     });
   }
