@@ -60,7 +60,7 @@ export class ApiService {
   }
 
   getUserSwitchMapSearch(email: string){
-    return this.http.get(`http://localhost:3000/?email=${email}`)
+    return this.http.get(`http://localhost:3000/users?email=${email}`)
   }
 
   getUserToArray(){
@@ -70,4 +70,7 @@ export class ApiService {
     );
   }
 
+  getUsersDebounceTime(name: string){
+    return this.http.get(`http://localhost:3000/users?name=${name}`)
+  }
 }

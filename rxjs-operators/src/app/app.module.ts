@@ -21,6 +21,12 @@ import { MapToComponent } from './components/operadores-transformacao/map-to/map
 import { SwitchMapComponent } from './components/operadores-transformacao/switch-map/switch-map.component';
 import { PluckComponent } from './components/operadores-transformacao/pluck/pluck.component';
 import { ToArrayComponent } from './components/operadores-transformacao/to-array/to-array.component';
+import { FilterComponent } from './components/operadores-filtragem/filter/filter.component';
+import { TakeComponent } from './components/operadores-filtragem/take/take.component';
+import { TakeUntilComponent } from './components/operadores-filtragem/take-until/take-until.component';
+import { TakeWhileComponent } from './components/operadores-filtragem/take-while/take-while.component';
+import { SkipComponent } from './components/operadores-filtragem/skip/skip.component';
+import { DebounceTimeComponent } from './components/operadores-filtragem/debounce-time/debounce-time.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +47,13 @@ import { ToArrayComponent } from './components/operadores-transformacao/to-array
     MapToComponent,
     SwitchMapComponent,
     PluckComponent,
-    ToArrayComponent
+    ToArrayComponent,
+    FilterComponent,
+    TakeComponent,
+    TakeUntilComponent,
+    TakeWhileComponent,
+    SkipComponent,
+    DebounceTimeComponent
   ],
   imports: [
     BrowserModule,
