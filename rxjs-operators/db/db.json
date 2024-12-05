@@ -10,5 +10,8 @@
     {"id": 8, "name": "Estilita Gomes", "email": "Estilita@teste.com"},
     {"id": 9, "name": "Beta Gomes", "email": "Beta@teste.com"},
     {"id": 10, "name": "Tia Day Batista", "email": "TiaDay@teste.com"}
-  ]
+  ],
+  "user": {
+    "email":"rafaeltec_@live.com"
+  }
 }

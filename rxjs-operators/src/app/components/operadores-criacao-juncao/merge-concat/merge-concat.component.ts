@@ -19,8 +19,6 @@ export class MergeConcatComponent {
       resp => console.log(resp)
     )
   }
-
-
   getUsersConcat(){
     const unsub = this.apiService.getUsersConcat().subscribe(
       resp => console.log(resp)
