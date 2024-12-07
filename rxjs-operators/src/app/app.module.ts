@@ -35,6 +35,9 @@ import { ShareReplayComponent } from './components/operadores-multicasting/share
 import { ShareComponent } from './components/operadores-multicasting/share/share.component';
 import { CatchErrorComponent } from './components/operadores-tratamento-erros/catch-error/catch-error.component';
 import { RetryWhenComponent } from './components/operadores-tratamento-erros/retry-when/retry-when.component';
+import { TapComponent } from './components/operadores-utilitarios/tap/tap.component';
+import { DelayComponent } from './components/operadores-utilitarios/delay/delay.component';
+import { TimeoutComponent } from './components/operadores-utilitarios/timeout/timeout.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +72,10 @@ import { RetryWhenComponent } from './components/operadores-tratamento-erros/ret
     ShareReplayComponent,
     ShareComponent,
     CatchErrorComponent,
-    RetryWhenComponent
+    RetryWhenComponent,
+    TapComponent,
+    DelayComponent,
+    TimeoutComponent
   ],
   imports: [
     BrowserModule,
