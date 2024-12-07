@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { concat, forkJoin, interval, map, merge, Observable, toArray, zip } from 'rxjs';
+import { concat, forkJoin, interval, map, merge, Observable, share, shareReplay, toArray, zip } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -73,4 +73,20 @@ export class ApiService {
   getUsersDebounceTime(name: string){
     return this.http.get(`http://localhost:3000/users?name=${name}`)
   }
+
+  getUsersShareReplay(){
+    return this.http.get(`http://localhost:3000/users`)
+    .pipe(
+      shareReplay(1)
+    )
+  }
+
+  getUsersShare(){
+    return this.http.get(`http://localhost:3000/users`)
+    .pipe(
+      share()
+    )
+  }
 }
+
+
