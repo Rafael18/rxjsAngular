@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { concat, forkJoin, interval, map, merge, Observable, share, shareReplay, toArray, zip } from 'rxjs';
+import { catchError, concat, forkJoin, interval, map, merge, Observable, of, retry, share, shareReplay, throwError, toArray, zip } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -86,6 +86,25 @@ export class ApiService {
     .pipe(
       share()
     )
+  }
+
+  getUserCathError(){
+    return this.http.get(`http://localhost:3000/use`)
+    .pipe(
+      // catchError(error => of('Ocorreu um error:', error))
+      catchError(error => {
+        if(error.status === 0 && error.status != 404){
+          return of('Ocorreu um erro na aplicação, tente novamente mais tarde');
+        }else if(error.status === 404){
+          console.log(error.message);
+        } else {
+          return of('Ocorreu um erro no servidor');
+        }
+
+        return throwError(() => error)
+      }),
+      retry(2)
+    );
   }
 }
 
