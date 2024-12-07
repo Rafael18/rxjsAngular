@@ -27,6 +27,10 @@ import { TakeUntilComponent } from './components/operadores-filtragem/take-until
 import { TakeWhileComponent } from './components/operadores-filtragem/take-while/take-while.component';
 import { SkipComponent } from './components/operadores-filtragem/skip/skip.component';
 import { DebounceTimeComponent } from './components/operadores-filtragem/debounce-time/debounce-time.component';
+import { SwitchAllComponent } from './components/operadores-juncao/switch-all/switch-all.component';
+import { StartWithComponent } from './components/operadores-juncao/start-with/start-with.component';
+import { CombineLatestComponent } from './components/operadores-juncao/combine-latest/combine-latest.component';
+import { WithLatestFromComponent } from './components/operadores-juncao/with-latest-from/with-latest-from.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +57,11 @@ import { DebounceTimeComponent } from './components/operadores-filtragem/debounc
     TakeUntilComponent,
     TakeWhileComponent,
     SkipComponent,
-    DebounceTimeComponent
+    DebounceTimeComponent,
+    SwitchAllComponent,
+    StartWithComponent,
+    CombineLatestComponent,
+    WithLatestFromComponent
   ],
   imports: [
     BrowserModule,
